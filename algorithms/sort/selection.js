@@ -19,15 +19,14 @@ function selectionSort (array) {
     array.splice(i, 0, array[aux])
     array.splice(aux + 1, 1)
   }
-
-  return array
 }
 
 function test () {
   console.log('Build unsorted array')
   const array = [1, 3, 6, 2, 4, 6, 9, 0, 1, 4]
   console.log(array)
-  console.log('Sorting Array', selectionSort(array))
+  console.log('Sorting Array')
+  console.log(selectionSort(array))
 }
 
 test()
