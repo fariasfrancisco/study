@@ -132,14 +132,10 @@ class BinarySearchTree {
       if (node.right != null) traverse(node.right)
     }
 
-    function getMiddleIndex (start, end) {
-      return Math.floor((start + end) / 2)
-    }
-
     function insertElement (start, end) {
       if (start > end) return
 
-      const mid = getMiddleIndex(start, end)
+      const mid = Math.floor((start + end) / 2)
       const left = insertElement(start, mid - 1)
       const right = insertElement(mid + 1, end)
 
